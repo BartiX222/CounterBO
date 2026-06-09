@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:CounterBO.Models"
+             x:Class="CounterBO.Views.CounterPage"
+             x:DataType="models:Counter"
+             Title="Counter">
+    <VerticalStackLayout
+    Padding="30"
+    Spacing="20"
+    HorizontalOptions="Center"
+    VerticalOptions="Center">
+
+        <Label
+        Text="Counter"
+        FontSize="24"
+        FontAttributes="Bold"
+        HorizontalOptions="Center" />
+
+        <Label
+        Text="{Binding Value}"
+        FontSize="48"
+        HorizontalOptions="Center" />
+
+        <HorizontalStackLayout Spacing="16" HorizontalOptions="Center">
+            <Button
+            Text="-"
+            Clicked="Decrement_Clicked"
+            WidthRequest="80"
+            HeightRequest="60"
+            FontSize="24" />
+            <Button
+            Text="+"
+            Clicked="Increment_Clicked"
+            WidthRequest="80"
+            HeightRequest="60"
+            FontSize="24" />
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
